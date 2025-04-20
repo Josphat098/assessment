@@ -16,6 +16,7 @@ const ForecastWeather = ({forecast}) => {
                         <p>{day.day.maxtemp_c}</p>
                         <p>{day.day.mintemp_c}</p>
                     </div>
+                    
                 ))}
             </div>
         </div>
