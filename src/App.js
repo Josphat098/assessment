@@ -3,6 +3,7 @@ import LocationInput from "./components/LocationInput";
 import CurrentWeather from "./components/CurrentWeather";
 import axios from "axios";
 import ForecastWeather from "./components/ForecastWeather";
+import './App.css';
 
 function App() {
   const[weather, setWeather] = useState(null);
