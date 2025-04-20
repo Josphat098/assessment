@@ -5,7 +5,7 @@ This is a REACT applucation that fetches and displays current weather conditions
 Search for any city and get:
 1. Current temperature, condition and wind speed.
 2. "Feels like' temperatures.
-3. 3- day weather forecast.
+3. next forecast.
 
 ## Technologies used
 1. React.js
