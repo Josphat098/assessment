@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import LocationInput from "./components/LocationInput";
 import CurrentWeather from "./components/CurrentWeather";
 import axios from "axios";
+import ForecastWeather from "./components/ForecastWeather";
 
 function App() {
   const[weather, setWeather] = useState(null);
@@ -11,7 +12,7 @@ function App() {
   const handleSubmit = async (cityName) => {
     try {
       const res = await axios.get(
-        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cityName}&aqi=n`
+        `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&aqi=n`
       );
       setWeather(res.data);
     } catch (err) {
@@ -24,6 +25,7 @@ function App() {
       <h1>Weather Dashboard</h1>
       <LocationInput onSubmit = {handleSubmit}/>
       <CurrentWeather weather = {weather}/>
+      <ForecastWeather forecast={weather?.forecast?.forecastday}/>
     </div>
   );
 }
